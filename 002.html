@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="002.css">
+</head>
+<body>
+    
+    <div class='alert-box' id='alert'><p id='text'>알림창임</p>
+        <button onclick="알림창열기('none')">닫기</button></div>
+    <button onclick="알림창열기('block','아이디입력하셈')">아이디입력하셈</button>
+    <button onclick="알림창열기('block','비밀번호 입력하셈')">비밀번호입력하셈</button>
+
+<script>
+    //UI 만드는 스텝
+    // 1. html css 로 미리 디자인
+    // 2. 필요할 때 보여달라고 코드짬 (js로)
+
+    function 알림창열기 (display,text) {
+        document.getElementById('alert').style.display = display;
+        document.getElementById('text').innerHTML = text;
+    }
+
+   
+
+
+    // function 알림창닫기 () {
+    //     document.getElementById('alert').style.display ='none';
+    // }    
+
+</script>
+</body>
+</html>
