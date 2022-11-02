@@ -7,7 +7,14 @@
     <title></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+<style>
+    .dark{
+        background-color: black;
+        color: white;
+    }
+</style>
 <body>
+    <p>안녕하세요</p>
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
           <span class="navbar-brand">JSshop</span>
@@ -19,19 +26,25 @@
       </nav> 
 <script>
     const darkMode = document.querySelector('.badge');
+    const body = document.querySelector('body')
     /* darkMode.addEventListener('click',()=>{
         darkMode.innerHTML=='Dark 🔄'?darkMode.innerHTML='Light 🔄':darkMode.innerHTML = 'Dark 🔄'
     }) */
-    
+
     let click = 0;
     darkMode.addEventListener('click',()=>{
         click++
         if(click%2==1){
             darkMode.innerHTML='Light 🔄'
+            body.classList.add('dark')
         }else if(click%2==0){
-            darkMode.innerHTML='Dark 🔄'
+            darkMode.innerHTML='Dark 🔄';
+            body.classList.remove('dark')
+
         }
     })
+
+
 </script>
 </body>
 </html>
